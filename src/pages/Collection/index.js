@@ -1,9 +1,5 @@
 function Collection() {
-    return (
-        <div>
-            <h2>Bộ sưu tập</h2>
-        </div>
-    );
+    return <div></div>;
 }
 
 export default Collection;

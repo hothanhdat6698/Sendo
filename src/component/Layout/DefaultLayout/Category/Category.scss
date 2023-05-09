@@ -1,0 +1,24 @@
+.slick-arrow.slick-prev::before {
+    color: #3f4b53;
+    border: 1px solid #fff;
+}
+
+.slick-arrow.slick-next::before {
+    color: #3f4b53;
+    border: 1px solid #fff;
+}
+
+.slick-prev {
+    left: -15px;
+    background-color: #fff;
+}
+
+.slick-next {
+    right: -15px;
+    background-color: #fff;
+}
+
+.slick-track {
+    margin-left: unset;
+    margin-right: unset;
+}

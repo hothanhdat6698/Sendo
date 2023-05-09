@@ -1,9 +1,5 @@
 function Price() {
-    return (
-        <div>
-            <h2>Giá tốt hôm nay</h2>
-        </div>
-    );
+    return <div></div>;
 }
 
 export default Price;

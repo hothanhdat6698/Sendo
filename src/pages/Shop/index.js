@@ -1,9 +1,5 @@
 function Shop() {
-    return (
-        <div>
-            <h2>Thông tin shop</h2>
-        </div>
-    );
+    return <div></div>;
 }
 
 export default Shop;

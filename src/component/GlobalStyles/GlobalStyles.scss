@@ -20,8 +20,13 @@ body {
     line-height: 1.8rem;
     font-weight: 400;
     text-rendering: optimizeSpeed;
+    background-color: #f2f3f4;
 }
 
 ul {
     list-style-type: none;
+}
+
+img {
+    display: block;
 }

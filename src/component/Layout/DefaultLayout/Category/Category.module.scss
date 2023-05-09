@@ -1,0 +1,116 @@
+.category {
+    max-width: 1356px;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.phone-name {
+    display: flex;
+    margin-top: 10px;
+}
+
+.iphone-image img {
+    width: 100%;
+}
+
+.phone-name img {
+    height: 23px;
+    padding: 5px;
+}
+
+.category-list {
+    margin: 10px 10px;
+    background-color: #fff;
+    transition: all 0.5s ease;
+    padding: 10px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 -2px 2px 0 rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+}
+
+.category-list:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.12), 0 -4px 8px 0 rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+}
+
+.price {
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.sale {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.address {
+    text-align: right;
+    font-size: 11px;
+    font-size: 400;
+}
+
+.Product-name {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 10px 10px;
+}
+
+.Product-name a {
+    color: #0f62fe;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 15px;
+}
+
+.Product-name a:hover {
+    cursor: pointer;
+}
+
+.list {
+    background-color: #fff;
+    border-radius: 8px;
+    padding-bottom: 20px;
+}
+
+.btn-selling {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.btn-sell a {
+    margin: 0 10px;
+    font-weight: 700;
+    padding: 0.6rem 1.6rem;
+}
+
+.btn-sell a:hover {
+    background-color: #fafafa;
+    border-color: #fafafa;
+    cursor: pointer;
+}
+
+.btn-sale {
+    background-color: #fef2f2;
+    border: 1px solid #f47c7b;
+    color: #ee2624;
+}
+
+.item-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-flex .item {
+    width: calc(100% / 6);
+}

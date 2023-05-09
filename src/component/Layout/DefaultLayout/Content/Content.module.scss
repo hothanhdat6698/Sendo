@@ -1,0 +1,84 @@
+.content {
+    max-width: 1356px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.store-logo img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 1px solid #e7e8ea;
+}
+
+.store {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.store-info {
+    display: flex;
+    width: 50%;
+    margin-left: 20px;
+}
+
+.store-description {
+    display: flex;
+    width: 50%;
+}
+
+.store-btn {
+    display: flex;
+    width: 100px;
+    padding: 10px 10px;
+    margin-right: 30px;
+}
+
+.store-btn button {
+    margin: 4px 4px;
+    background-color: #e7e8ea;
+    border: 1px solid #e7e8ea;
+    color: #3f4b53;
+    border-radius: 4px;
+}
+
+.store-flagship {
+    width: 100%;
+    padding: 17px 13px;
+}
+
+.btn-left {
+    margin-left: 10px;
+}
+
+.store-icon {
+    display: flex;
+    padding: 10px 10px;
+    margin-left: 25px;
+}
+
+.store-desc {
+    margin-left: 20px;
+    color: #ee6c0e;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.8rem;
+}
+
+.name-channel {
+    display: flex;
+}
+
+.name-channel img {
+    width: 3.2rem;
+}
+
+.sub {
+    margin-top: 10px;
+}

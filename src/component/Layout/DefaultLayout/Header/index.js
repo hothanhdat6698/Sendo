@@ -1,27 +1,50 @@
 import classNames from 'classNames/bind';
 import styles from './Header.module.scss';
-import Tippy from '@tippyjs/react/headless';
-import { Wrapper as PopperWrapper } from '../../../Popper';
 import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 function Header() {
     const [showResult, setShowResult] = useState(false);
+    const [downLoadApp, setDownLoadApp] = useState(false);
+    const [customers, setCustomers] = useState(false);
+    const [selectInput, setSelectInput] = useState('Sendo');
+    const [showSelect, setShowSelect] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
 
+    const handleClick = (value) => {
+        setShowSelect(false);
+        setSelectInput(value);
+    };
     return (
         <div>
             <header className={cx('wrapper')}>
                 <div className={cx('text')}>
-                    <p>Tải ứng dụng</p>
-                    <p>Chăm sóc khách hàng</p>
-                    <p>Kiểm tra đơn hàng</p>
+                    <p className={cx('app')} onClick={() => setDownLoadApp(!downLoadApp)}>
+                        Tải ứng dụng
+                    </p>
+                    {downLoadApp && (
+                        <div className={cx('code-qr')}>
+                            <img src="https://media3.scdn.vn/img2/2018/5_23/R842FO.png" alt="" />
+                            <p>Quét để tải ứng dụng</p>
+                        </div>
+                    )}
+                    <p className={cx('customer')} onClick={() => setCustomers(!customers)}>
+                        Chăm sóc khách hàng
+                    </p>
+                    {customers && (
+                        <div className={cx('customer-result')}>
+                            <p>Trung tâm hỗ trợ</p>
+                            <p>Trả hàng hoàn tiền</p>
+                        </div>
+                    )}
+                    <p className={cx('order check')}>Kiểm tra đơn hàng</p>
                 </div>
             </header>
             <header className={cx('wrapper-1')}>
                 <div className={cx('content')}>
                     <h2 className={cx('logo')}>Sendo</h2>
-                    <div className={cx('icon')}>
+                    <div onClick={() => setShowMenu(!showMenu)} className={cx('icon')}>
                         <svg
                             fill="#f0f0f0"
                             viewBox="0 0 24 24"
@@ -47,6 +70,30 @@ function Header() {
                             </g>
                         </svg>
                     </div>
+                    {showMenu && (
+                        <div className={cx('menu-modal')}>
+                            <ul>
+                                <li>Thời trang nữ</li>
+                                <li>Thời trang nam</li>
+                                <li>Sức khỏe - Làm đẹp</li>
+                                <li>Giày dép - Túi xách</li>
+                                <li>Đồng hồ - Trang sức</li>
+                                <li>Điện thoại - Laptop</li>
+                                <li>Phụ kiện công nghệ</li>
+                                <li>Đồ da dụng - Điện máy</li>
+                                <li>Nhà cửa - Tân trang nhà</li>
+                                <li>Tivi - Âm thanh - Camera</li>
+                                <li>Đời sống - Sách - VPP</li>
+                                <li>Bách hóa - Thú cưng</li>
+                                <li>Mẹ & Bé - Đồ chơi</li>
+                                <li>Tiện ích </li>
+                                <li>Vay tiền mặt</li>
+                                <li>Vé máy bay - Tour - Dịch vụ</li>
+                                <li>Ôtô - Xe máy - Xe đạp</li>
+                                <li>Thế thao - Dã ngoại</li>
+                            </ul>
+                        </div>
+                    )}
                     <div className={cx('input-shop')}>
                         <input onClick={() => setShowResult(!showResult)} type="text" placeholder="Tìm trong Shop" />
                         {showResult && (
@@ -55,7 +102,63 @@ function Header() {
                                     <li>Lịch sử tìm kiếm</li>
                                     <li>tai nghe blutetooth</li>
                                     <li>Xu hướng tìm kiếm</li>
+                                    <li>Vay tiền online nhanh nhất</li>
+                                    <li>Đồng hồ</li>
+                                    <li>Giàn phun viên</li>
+                                    <li>Lịch sử tìm kiếm</li>
+                                    <li>tai nghe blutetooth</li>
+                                    <li>Xu hướng tìm kiếm</li>
+                                    <li>Vay tiền online nhanh nhất</li>
+                                    <li>Đồng hồ</li>
+                                    <li>Giàn phun viên</li>
                                 </ul>
+                            </div>
+                        )}
+                        <div className={cx('select')} onClick={() => setShowSelect(!showSelect)}>
+                            {selectInput === 'Sendo' ? selectInput : 'Apple Flaship store'}
+                        </div>
+                        {showSelect && (
+                            <div className={cx('select-input')}>
+                                <p onClick={() => handleClick('Sendo')}>
+                                    Tìm trên Sendo{' '}
+                                    {selectInput === 'Sendo' && (
+                                        <span>
+                                            <svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                version="1.1"
+                                            >
+                                                <path
+                                                    fill="#6F787E"
+                                                    fill-rule="nonzero"
+                                                    d="M9.707 14.293 19 5l1.414 1.414L9.707 17.121 4 11.414 5.414 10z"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                    )}
+                                </p>
+                                <p onClick={() => handleClick('Apple Flagship store')}>
+                                    Tìm trong Apple Flagship store{''}
+                                    {selectInput === 'Apple Flagship store' && (
+                                        <span>
+                                            <svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                version="1.1"
+                                            >
+                                                <path
+                                                    fill="#6F787E"
+                                                    fill-rule="nonzero"
+                                                    d="M9.707 14.293 19 5l1.414 1.414L9.707 17.121 4 11.414 5.414 10z"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                    )}
+                                </p>
                             </div>
                         )}
                     </div>

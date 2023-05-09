@@ -1,9 +1,5 @@
 function Products() {
-    return (
-        <div>
-            <h2>Sản phẩm</h2>
-        </div>
-    );
+    return <div></div>;
 }
 
 export default Products;
