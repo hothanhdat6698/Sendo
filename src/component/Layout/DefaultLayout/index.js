@@ -1,4 +1,4 @@
-import classNames from 'classNames/bind';
+import classNames from 'classnames/bind';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Content from './Content';

@@ -1,4 +1,4 @@
-import classNames from 'classNames/bind';
+import classNames from 'classnames/bind';
 import styles from './Navbar.module.scss';
 import Price from '../../../../pages/Price';
 import Products from '../../../../pages/Products';
